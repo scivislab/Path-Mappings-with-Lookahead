@@ -1,0 +1,68 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "TTK-Default",
+            "hidden": true,
+            "binaryDir": "build",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "TTK_ENABLE_DOUBLE_TEMPLATING": "OFF"
+            }
+        },
+        {
+            "name": "TTK-Release",
+            "inherits": "TTK-Default",
+            "binaryDir": "build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "TTK_ENABLE_CPU_OPTIMIZATION": "OFF",
+                "TTK_ENABLE_MPI": "OFF",
+                "TTK_BUILD_VTK_PYTHON_MODUL": "ON",
+                "TTK_BUILD_VTK_WRAPPERS": "ON",
+                "VTK_MODULE_ENABLE_ttkMergeTreePrincipalGeodesics": "NO",
+                "VTK_MODULE_ENABLE_ttkMergeTreePrincipalGeodesicsDecoding": "NO",
+                "VTK_MODULE_ENABLE_ttkMergeTreeTemporalReduction": "YES",
+                "VTK_MODULE_ENABLE_ttkMergeTreeTemporalReductionDecoding": "YES",
+                "VTK_MODULE_ENABLE_ttkMergeTreeClustering": "YES",
+                "TTK_ENABLE_KAMIKAZE": "ON",
+                "TTK_ENABLE_WEBSOCKETPP": "OFF",
+                "WEBSOCKETPP_DIR": "/home/wetzels/ttk/ttk-jonas/websocketpp/install/lib/cmake/websocketpp"
+            }
+        },
+        {
+            "name": "TTK-PerformanceBenchmark",
+            "inherits": "TTK-Default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "TTK_ENABLE_CPU_OPTIMIZATION": "ON",
+                "TTK_ENABLE_KAMIKAZE": "ON"
+            }
+        },
+        {
+            "name": "TTK-Debug",
+            "inherits": "TTK-Default",
+            "binaryDir": "build/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "TTK_ENABLE_KAMIKAZE": "OFF"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "TTK-Release",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "TTK-Release",
+            "jobs":4
+        },
+        {
+            "name": "TTK-Debug",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "TTK-Debug",
+            "jobs":4
+        }
+    ]
+}
