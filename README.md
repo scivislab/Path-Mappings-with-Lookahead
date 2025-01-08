@@ -22,7 +22,7 @@ sudo apt-get install qttools5-dev libqt5x11extras5-dev libqt5svg5-dev qtxmlpatte
 sudo apt-get install python3-sklearn 
 sudo apt-get install libsqlite3-dev 
 sudo apt-get install gawk
-sudo apt-get install git
+sudo apt-get install git p7zip-full wget
 ```
 
 ### Install Paraview
