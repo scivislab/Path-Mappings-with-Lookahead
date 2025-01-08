@@ -8,6 +8,10 @@ matrix0 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la0.csv", "rb"), delim
 matrix1 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la1.csv", "rb"), delimiter=",", skiprows=1)
 matrix2 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la2.csv", "rb"), delimiter=",", skiprows=1)
 
+print(matrix0)
+print(matrix1)
+print(matrix2)
+
 embedding0 = TSNE(n_components=2).fit_transform(matrix0)
 embedding1 = TSNE(n_components=2).fit_transform(matrix1)
 embedding2 = TSNE(n_components=2).fit_transform(matrix2)
