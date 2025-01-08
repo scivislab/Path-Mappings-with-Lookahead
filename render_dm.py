@@ -4,9 +4,9 @@ from sklearn.manifold import MDS
 import matplotlib.pyplot as plt
     
    
-matrix0 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la0.csv", "rb"), delimiter=",", skiprows=1)
-matrix1 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la1.csv", "rb"), delimiter=",", skiprows=1)
-matrix2 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la2.csv", "rb"), delimiter=",", skiprows=1)
+matrix0 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la0.csv", "rb"), delimiter=",", skiprows=1,usecols=range(0,300))
+matrix1 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la1.csv", "rb"), delimiter=",", skiprows=1,usecols=range(0,300))
+matrix2 = np.loadtxt(open("prepare-data/Cylinder2D.cdb/dm_la2.csv", "rb"), delimiter=",", skiprows=1,usecols=range(0,300))
 
 print(matrix0)
 print(matrix1)
