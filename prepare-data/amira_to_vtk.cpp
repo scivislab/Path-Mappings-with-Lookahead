@@ -125,6 +125,7 @@ int main()
             //Note: Data runs x-fastest, i.e., the loop over the x-axis is the innermost
             printf("\nPrinting all values in the same order in which they are in memory:\n");
             int Idx(0);
+            std::string data_csv = "time,FILE\n";
             for(int k=0;k<zDim;k++)
             {
             	std::string timestep_vtk = "# vtk DataFile Version 2.0\n2D Vortex Street\nASCII\nDATASET STRUCTURED_POINTS\nDIMENSIONS "+std::to_string(xDim)+" "+std::to_string(yDim)+" 1\nPOINT_DATA "+std::to_string(xDim*yDim)+"\nSCALARS magnitude float 1\nLOOKUP_TABLE default\n";
@@ -151,9 +152,14 @@ int main()
 		    myfile.open ("Cylinder2D_"+std::to_string(k)+".vtk");
 		    myfile << timestep_vtk;
 		    myfile.close();
+		    data_csv += std::to_string(k)+",Cylinder2D_"+std::to_string(k)+".vtk\n";
 		}
-		printf("\n%i\n",k);
+		printf("%i\n",k);
             }
+            std::ofstream myfile;
+	    myfile.open ("data.csv");
+	    myfile << data_csv;
+	    myfile.close();
 
             delete[] pData;
         }
