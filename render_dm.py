@@ -30,7 +30,7 @@ ax.set_xticks(np.arange(0,301,25))
 ax.set_yticks(np.arange(0,301,25))
 fig.savefig("dm_la2.pdf", transparent=True, bbox_inches="tight", pad_inches=0.1)
 
-colarr = range(300)
+colarr = range(301)
 
 fig, ax = plt.subplots()
 im = ax.scatter([x[0] for x in embedding0],[x[1] for x in embedding0], label="PMD0", s=4, c=colarr)
