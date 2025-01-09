@@ -2,10 +2,9 @@
 
 This repository contains the source code for the PacificVis 2025 paper
 
-"Accelerating Computation of Stable Merge Tree Edit Distances using Parameterized Heuristics"
-Florian Wetzels, Heike Leitte and Christoph Garth
-IEEE Transactions on Visualization and Computer Graphics, 2025.
-
+"Accelerating Computation of Stable Merge Tree Edit Distances using Parameterized Heuristics"  
+Florian Wetzels, Heike Leitte and Christoph Garth  
+IEEE Transactions on Visualization and Computer Graphics, 2025.  
 [Link to paper](https://arxiv.org/pdf/2307.02509.pdf)
 
 The sections below contain detailed instructions on how to compile and run the code on a vanilla Ubuntu 22.04 to reproduce the teaser figure of the paper.
