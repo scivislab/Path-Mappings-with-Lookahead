@@ -8,7 +8,23 @@ IEEE Transactions on Visualization and Computer Graphics, 2025.
 
 [Link to paper](https://arxiv.org/pdf/2307.02509.pdf)
 
-The sections below contain instructions on how to compile and run the code on a vanilla Ubuntu 22.04 to reproduce the teaser figure of the paper.
+The sections below contain detailed instructions on how to compile and run the code on a vanilla Ubuntu 22.04 to reproduce the teaser figure of the paper.
+For simple usage, you can clone this repository and run the installation script, the data script and the python code to render the figure:
+
+```bash
+./install.sh
+./get_data.sh
+python3 compute_dm.py
+```
+
+The directory `ttk-lookahead` contains a complete ttk source with the new look-ahead extension added to the path mapping distance.
+The installation script `install.sh` installs all dependencies, downloads the paraview source code and compiles paraview as well as ttk.
+The data script `get_data.sh` downloads the [2D vortex street dataset](https://www.csc.kth.se/~weinkauf/notes/cylinder2d.html) and converts it to vtk files.
+The python script `compute_dm.py` loads the vtk dataset, computes merge trees and the distance matrix with the path mapping distance for look-ahead values of 0-3.
+
+This produces four pdf files containing the distance matrices from the paper teaser, as well as four pdf files containing the t-SNE embeddings from the same figure.
+All outputs are located in the root directory of the repository.
+For a look-ahead value k (0-3), the two pdf are named `dm_la<k>.pdf` and `embedding_la<k>.pdf`.
 
 ## Installation Note
 
