@@ -1,6 +1,6 @@
 # Path Mappings with Lookahead
 
-This repository contains the source code for the paper presented PacificVis 2025:
+This repository contains the source code for the PacificVis 2025 paper
 
 "Accelerating Computation of Stable Merge Tree Edit Distances using Parameterized Heuristics"
 Florian Wetzels, Heike Leitte and Christoph Garth
@@ -8,7 +8,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2025.
 
 [Link to paper](https://arxiv.org/pdf/2307.02509.pdf)
 
-The section below contains instructions on how to compile and run the code on a vanilla Ubuntu 22.04 to reproduce the teaser figure of the paper.
+The sections below contain instructions on how to compile and run the code on a vanilla Ubuntu 22.04 to reproduce the teaser figure of the paper.
 
 ## Installation Note
 
@@ -17,12 +17,12 @@ Tested on Ubuntu 22.04.3 LTS.
 ### Install the dependencies
 
 ```bash
-sudo apt-get install cmake-qt-gui libboost-system-dev libpython3.10-dev libxt-dev libxcursor-dev libopengl-dev
-sudo apt-get install qttools5-dev libqt5x11extras5-dev libqt5svg5-dev qtxmlpatterns5-dev-tools 
-sudo apt-get install python3-sklearn 
-sudo apt-get install libsqlite3-dev 
-sudo apt-get install gawk
-sudo apt-get install git p7zip-full wget
+sudo apt-get -y install cmake-qt-gui libboost-system-dev libpython3.10-dev libxt-dev libxcursor-dev libopengl-dev
+sudo apt-get -y install qttools5-dev libqt5x11extras5-dev libqt5svg5-dev qtxmlpatterns5-dev-tools 
+sudo apt-get -y install python3-sklearn 
+sudo apt-get -y install libsqlite3-dev 
+sudo apt-get -y install gawk
+sudo apt-get -y install git p7zip-full wget
 ```
 
 ### Install Paraview
