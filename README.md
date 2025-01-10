@@ -8,7 +8,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2025.
 <!---[Link to paper]()-->
 
 The sections below contain detailed instructions on how to compile and run the code on a vanilla Ubuntu 22.04 to reproduce the teaser figure of the paper.
-For simple usage, you can clone this repository and run the installation script, the data script and the python code to render the figure:
+For simple usage, you can clone this repository and run the installation script, the data script and the python code to render the figure (details below), all from the root directory of this repository:
 
 ```bash
 ./install.sh
